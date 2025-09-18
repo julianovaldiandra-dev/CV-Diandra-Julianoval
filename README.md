@@ -1,110 +1,216 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Diandra Julianoval</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f0f2f5;
-    }
-    .container {
-      width: 800px;
-      margin: 30px auto;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(135deg, #2c3e50, #3498db);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-    .header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-      object-fit: cover;
-    }
-    .header h1 {
-      margin: 10px 0 5px;
-      font-size: 28px;
-    }
-    .header p {
-      margin: 5px 0;
-      font-size: 16px;
-    }
-    .content {
-      padding: 25px 30px;
-    }
-    h2 {
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-    .footer {
-      text-align: center;
-      padding: 15px;
-      background: #3498db;
-      color: white;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Diandra Julianoval</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #7a0000;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1f2833, #2c3c52);
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-photo-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(80%);
+            transition: filter 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            filter: none;
+        }
+
+        .header-content {
+            margin-left: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .npm {
+            font-size: 1.1em;
+            margin-top: 5px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .section {
+            padding: 35px 45px;
+            border-bottom: 2px solid #e1e4e8;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #1f2833;
+            border-bottom: 3px solid #66b3ff;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .content-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .content-item {
+            margin-bottom: 20px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .content-item::before {
+            content: '•';
+            color: #66ff7a;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .content-item p {
+            margin: 5px 0 0;
+        }
+
+        .skill-item {
+            background-color: #e1f0ff;
+            color: #008b13;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0 8px 8px 0;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .education-item h4 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #1f2833;
+        }
+
+        .education-details {
+            font-size: 1em;
+            color: #555;
+        }
+        .education-details span {
+            color: #00ff40;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Bagian Header -->
+
+<div class="container">
     <div class="header">
-      <img src="FOTO CV.jpg" alt="Foto Profil">
-      <h1>Diandra Julianoval</h1>
-      <p><b>NPM:</b> 241171001 | <b>Jenis Kelamin:</b> Laki-Laki</p>
-      <p><b>TTL:</b> Palu, 12 Juli 2006</p>
-      <p><b>IPK Khayalan:</b> 4.00</p>
+        <div class="profile-photo-container">
+            <img src="Foto CV.jpg" alt="Foto Profil" class="profile-photo">
+        </div>
+        <div class="header-content">
+            <h1>Diandra Julianoval</h1>
+            <p><strong>diandranoval2006@gmail.com</strong></p>
+        </div>
     </div>
 
-    <!-- Konten CV -->
-    <div class="content">
-      <h2>Riwayat Pendidikan</h2>
-      <ul>
-        <li>SD Negeri 6 Lolu Palu (2012 - 2018)</li>
-        <li>SMP Negeri 12 Bandung  (2018 - 2021)</li>
-        <li>SMA Negeri 1 Palu (2021 - 2024)</li>
-        <li>Universitas  Widyatama - Sistem Informasi (2024 - Sekarang)</li>
-      </ul>
-
-      <h2>Keahlian</h2>
-      <ul>
-        <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-        <li>Desain Grafis (Canva, Photoshop dasar)</li>
-        <li>Public Speaking</li>
-      </ul>
-
-      <h2>Informasi Lain</h2>
-      <p>Asal Palu Sulawesi Tengah, hobi olahraga dan mendengarkan musik. 
-         Suka belajar hal baru, mampu bekerja sama dalam tim, 
-         dan aktif di organisasi kampus.</p>
+    <div class="section">
+        <h2 class="section-title">Informasi Pribadi</h2>
+        <ul class="content-list">
+            <li class="content-item"><strong>Nama:</strong> Diandra Julianoval</li>
+            <li class="content-item"><strong>NPM:</strong> 241171001</li>
+            <li class="content-item"><strong>Tempat, Tanggal Lahir:</strong> Palu, 12 Juli 2006</li>
+            <li class="content-item"><strong>Jenis Kelamin:</strong> Laki-Laki</li>
+            <li class="content-item"><strong>IPK:</strong> 3.99</li>
+        </ul>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      © 2025 - CV Digital Diandra Julianoval
+    <div class="section">
+        <h2 class="section-title">Riwayat Pendidikan</h2>
+        <div class="education-item">
+            <h4>Universitas Widyatama</h4>
+            <p class="education-details">Sistem Informasi, 2024 - Sekarang</p>
+        </div>
+        <div class="education-item">
+            <h4>SMAN 1 Palu</h4>
+            <p class="education-details">IPA, 2021 - 2024</p>
+        </div>
+            <h4>SMPN 12 Bandung</h4>
+            <p class="education-details">2018 - 2021</p>
+        </div>
+
+    <div class="section">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-container">
+            <span class="skill-item">Microsoft Office (Word, Excel, PowerPoint)</span>
+            <span class="skill-item">Manajemen Waktu</span>
+            <span class="skill-item">Desain grafis (canva,Photoshop dasar)</span>
+            <span class="skill-item">publik speaking</span>
+            </div>
     </div>
-  </div>
+
+    <div class="section">
+        <h2 class="section-title">Hobi & Minat</h2>
+        <div class="content-item">
+            <p>Asal Palu Sulawesi Tengah, hobi olahraga dan mendengarkan musik. 
+                Suka belajar hal baru, mampu bekerja sama dalam tim, 
+                dan aktif di organisasi kampus.</p>
+        </div>
+    </div>
+
+</div>
+
 </body>
+
 </html>
